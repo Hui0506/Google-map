@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find Your Neighborhood Place</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Indie+Flower|Raleway" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+ 	<script src="js/jquery-jsonp-min.js"></script>
+</head>
+<body>
+<div class="container">
+	<article class="opt_box">
+		<button id="hide-bar">Hide the bar</button>
+		<h2>Find Your Neighborhood Area</h2>
+		<nav>
+			<input type="button" class="marker-control" id="show-place" value="Show all markers">
+			<input type="button" class="marker-control" id="hide-place" value="Hide all markers">
+		</nav>
+		<article>
+			<section class="search-container">
+				<input type="text" id="input-places">
+				<input type="button" id="search-places" value="search">
+			</section>
+			<section class="option-container">
+				<section class="option-box">
+					<button id = "place0" data-bind="text: showing_places()[0]" class="option-place"></button>
+					<button class="clear-marker" id = "clear0">Clear Marker</button>
+				</section>
+				<section class="option-box">
+					<button id = "place1" data-bind="text: showing_places()[1]" class="option-place"></button>
+					<button class="clear-marker" id = "clear1">Clear Marker</button>
+				</section>
+				<section class="option-box">
+					<button id = "place2" data-bind="text: showing_places()[2]" class="option-place"></button>
+					<button class="clear-marker" id = "clear2">Clear Marker</button>
+				</section>
+				<section class="option-box">
+					<button id = "place3" data-bind="text: showing_places()[3]" class="option-place"></button>
+					<button class="clear-marker" id = "clear3">Clear Marker</button>
+				</section>
+				<section class="option-box">
+					<button id = "place4" data-bind="text: showing_places()[4]" class="option-place"></button>
+					<button class="clear-marker" id = "clear4">Clear Marker</button>
+				</section>
+				<section class="option-box">
+					<button id = "place5" data-bind="text: showing_places()[5]" class="option-place"></button>
+					<button class="clear-marker" id = "clear5">Clear Marker</button>
+				</section>
+			</section>
+			<article class="wikipedia-container">
+				<h3>Relevant Wikipedia Links</h3>
+				<ul id="wikipedia-links">
+				</ul>
+			</article>
+		</article>
+	</article>
+	<div class="header_menu">
+		<a id="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+          </svg>
+        </a>
+	</div>
+	<section id="map">
+	</section>
+</div>
+<script type="text/javascript">
+	//This part is to set the List in the left bar using knockout.
+	//Use obserableArray to show the places in the list.
+	var ViewModel = function() {
+		this.showing_places = ko.observableArray(['University of Southern California', 'Santa Monica', 'Hollywood', 'Universal Studios', 'Chinatown', 'Griffith Observatory']);
+	}
+	ko.applyBindings(new ViewModel());
+</script>
+<script src='js/humburger.js'></script>
+<script type="text/javascript" src='js/loadwiki.js'></script>
+<script src='js/googlemap.js'></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyDdEfXK7WnCuVw_Y-VIckbq3tSg9VQZnDE&v=3&callback=initMap">
+</script>
+</body>
+</html>

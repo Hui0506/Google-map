@@ -1,0 +1,18 @@
+## Introduction
+> This project is a map application using google maps API and MediaWiki API.
+> There are two main parts of the website. The left part is the nav bar and the right part is the main map.
+> In the left bar, there are four main subparts with seperated functions.
+> The showallmarkers and hidemarkers can show all markers and hide all markers of the listing six places. Clicking each each can get streetview details of corresponding place;
+> List of six places support choice of setting of marker. This part uses knockout frame. Button clearmarker can hide the setting marker.
+> The last part connects with the link of wikipedia. This part can support the information searching from the third part of resource.
+
+## How to run it
+> Open the file of index.html
+> Click showallmarkers button to show all six markers.
+> Click hideallmarkers button to hide all six markers.
+> Type searching placing in the search box and click search button to set the corresponding marker.
+> Click corresponding place button to set the marker.
+> Click clear marker button to clear the marker in the map that set just now.
+> Click marker in the map and open a inforwindow with specific information including streetview and other details.
+> Click the name of article to jump to the third part of website(widipedia) for further information.
+> Click the hamburger icon to show the left bar if the screen is smaller than 500px.

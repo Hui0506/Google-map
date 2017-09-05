@@ -1,0 +1,120 @@
+<style>
+	html, body {
+		height: 100%;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: white;
+		font-family: 'Baloo Bhaina', cursive;
+	}
+	.container {
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.wikipedia-container {
+		margin-top: 20px;
+		height: 200px;
+		overflow: scroll;
+	}
+	li, ul, a {
+		color: white;
+		font-family: 'Indie Flower', cursive;
+	}
+	.search-container {
+		margin-top: 15px;
+		margin-bottom: 20px;	
+	}
+	#input-places {
+		width: 69%;
+	}
+	#hide-bar {
+		display: none;
+	}
+	#search-places {
+		width: 25%;
+		background-color: #5E5E5E; 
+		color: white;
+	}
+	#map {
+		height: 600px;
+		width: 69%;
+		margin: 0;
+		float: right;
+	}
+	.opt_box {
+		width: 30%;
+		margin-right: 3px;
+		background-color: #5E5E5E;
+	}
+	.marker-control {
+		width: 48%;
+		margin: 0;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 20px;
+		background-color: #5E5E5E;
+		border-style: solid;
+		color: white;
+	}
+	.option-box {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	.option-place {
+		width: 65%;
+		display: inline;
+		text-align: left;
+		border-style: none;
+		background-color: #5E5E5E;
+		color: white;
+		font-family: 'Raleway', sans-serif;
+		font-size: 15px;
+	}
+	.clear-marker {
+		width: 30%;
+		height: 100%;
+		display: inline;
+		background-color: #5E5E5E;
+		border-style: none;
+		color: white;
+		font-family: 'Raleway', sans-serif;
+	}
+	#pano {
+		width: 180px;
+		height: 180px;
+	}
+	@media screen and (max-width: 600px) {
+		#map {
+			width: 100%;
+			display: block;
+		}
+		#menu {
+			height: 40px;
+		}
+		#hide-bar {
+			float: right;
+			display: block;
+			background-color: #5E5E5E;
+		}
+		.header_menu {
+			width: 40px;
+			height: 40px;
+		}
+		.opt_box {
+			margin-top: 40px;
+			z-index: 10;
+			width: 300px;
+			position: absolute;
+			-webkit-transform: translate(-400px, 0);
+			transform: translate(-400px, 0);
+			transition: transform 0.3s ease;
+		}
+		.opt_box.open {
+			margin-top: 40px;
+			width: 300px;
+			position: absolute;
+			-webkit-transform: translate(0, 0);
+			transform: translate(0, 0);
+		}
+	}
+</style>
